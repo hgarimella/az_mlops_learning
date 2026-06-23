@@ -1,16 +1,16 @@
 name: Manually trigger an Azure Machine Learning job
 
 on:
-workflow_dispatch:
-  pull_request:
-    branches:
-      - main
+  workflow_dispatch:
+    pull_request:
+      branches:
+        - main
 
 jobs:
   train:
     runs-on: ubuntu-latest
     steps:
-    - name: Check out repo
+    - name: Check out repos
       uses: actions/checkout@main
     - name: Install az ml extension
       run: az extension add -n ml -y

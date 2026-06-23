@@ -66,7 +66,7 @@ def eval_model(model, X_test, y_test):
     # calculate AUC
     y_scores = model.predict_proba(X_test)
     auc = roc_auc_score(y_test,y_scores[:,1])
-    print('AUC: ' + str(auc))
+    print('Dont understand this AUC: ' + str(auc))
     mlflow.log_metric("AUC", auc)
 
     # plot ROC curve
